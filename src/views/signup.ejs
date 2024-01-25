@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가입하기</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form method="POST" action="/signup">
+      <div class="row">
+        <h4>회원가입</h4>
+      </div>
+      <div class="row margin emailForm">
+        <input
+          id="email"
+          name="email"
+          type="text"
+          style="cursor: auto"
+          class="email"
+          placeholder="이메일을 입력하세요"
+        />
+      </div>
+
+      <div class="row margin nameForm">
+        <i class="material-icons prefix"></i>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          style="cursor: auto"
+          class="name"
+          placeholder="이름을 입력하세요"
+        />
+      </div>
+
+      <div class="row margin nameForm">
+        <i class="fa-solid fa-cake-candles"></i>
+        <input
+          id="birth"
+          name="birth"
+          type="date"
+          style="cursor: auto"
+          class="birth"
+          placeholder="생년월일을 입력하세요"
+        />
+      </div>
+
+      <div class="row margin passForm">
+        <input
+          id="password"
+          name="password"
+          type="password"
+          class="password"
+          placeholder="비밀번호를 입력하세요"
+        />
+      </div>
+
+      <div class="row margin passForm">
+        <input
+          id="password2"
+          name="password2"
+          type="password"
+          class="password2"
+          placeholder="비밀번호 확인"
+        />
+      </div>
+
+      <div class="row">
+        <input type="submit" class="register" value="회원가입" />
+        <p class="margin">
+          이미 계정을 갖고 계신가요? <a href="/">지금 로그인하기</a>
+        </p>
+      </div>
+    </form>
+  </body>
+</html>

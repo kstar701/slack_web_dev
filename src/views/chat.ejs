@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <!--css폰트-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!--fullCalendar-->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+    <!--파일import-->
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/chat.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <%- include('./components/header') %>
+    <div class="main-container">
+      <aside class="side-bar">
+        <div class="nav_list">
+          <div class="channel">
+            <div class="channel-title">
+              <i class="fa-solid fa-code"></i>
+              <span>채널</span>
+            </div>
+            <ul>
+              <li><a href="#">팀채팅</a></li>
+              <li><a href="#">개발</a></li>
+            </ul>
+          </div>
+          <div class="chatting">
+            <i class="fa-solid fa-comment"></i>
+            <span class="chat-title">채팅</span>
+            <% chatMembers.forEach(chatMember => { %>
+            <ul class="member-list">
+              <div class="user-chat">
+                <i class="fa-regular fa-user"></i>
+                <li><a href="#"><%= chatMember.userId.name %></a></li>
+              </div>
+            </ul>
+            <% }) %>
+          </div>
+        </div>
+      </aside>
+
+      <div class="wrapper">
+        <div class="user-container">
+          <label for="nickname">대화명</label>
+          <input type="text" id="nickname" />
+        </div>
+        <div class="display-container">
+          <ul class="chatting-list"></ul>
+        </div>
+        <div class="input-container">
+          <span>
+            <input type="text" class="chatting-input" />
+            <button class="send-button">전송</button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+    <script src="/js/time.js"></script>
+  </body>
+</html>

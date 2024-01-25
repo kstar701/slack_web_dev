@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <!--css폰트-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!--fullCalendar-->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+    <!--파일import-->
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <%- include('./components/header') %>
+    <div id="main-container">
+      <section id="calendar-container">
+        <div id="calendar"></div>
+      </section>
+      <section>
+        <div class="inner">
+          <div class="tail-container">
+            <div class="work-info">
+              <div class="work-info-time">
+                <span>근무시간 :</span>
+                <span>지난 주 [00시간00분] /</span>
+                <span>이번 주 [00시간00분]</span>
+              </div>
+              <div class="work-info-btn">
+                <button class="work-onoff-btn">출근</button>
+                <button class="work-member-btn">멤버보기</button>
+              </div>
+            </div>
+            <div class="my-info">
+              <span>내 정보 :</span>
+              <span><%= user.name %> /</span>
+              <span>생일 : <%= user.birth %> /</span>
+              <span>입사일 <%= user.register_date %> /</span>
+              <span>지금까지 근무일 : <%= allWorkTime %>일</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./js/calendar.js"></script>
+    <script src="./js/time.js"></script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-container {
+  display: flex;
+}
+
+.side-bar {
+  padding-top: 80px;
+  width: 20%;
+  background-color: #ccc;
+  height: 100vh;
+  text-align: center;
+  font-size: 25px;
+}
+
+.channel,
+.chatting {
+  margin-top: 40px;
+}
+.channel {
+  border-bottom: 1px solid black;
+}
+
+.channel > ul,
+.chatting > ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.channel > ul > li,
+.chatting > ul > li {
+  margin-top: 20px;
+}
+.member-list {
+  margin-top: 20px;
+}
+.user-chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.fa-regular {
+  margin-right: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /*세로정렬*/
+  overflow: hidden;
+}
+.user-container {
+  background: #a9bdce;
+  flex: 1; /*비율로 크기차지*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+}
+.user-container label {
+  font-size: 14px;
+  margin-right: 1rem;
+}
+.user-container input {
+  border-radius: 3px;
+  border: none;
+  height: 100%;
+}
+
+.display-container {
+  flex: 12;
+  background-color: #b2c7d9;
+  overflow-y: scroll;
+}
+.input-container {
+  flex: 1;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+.input-container span {
+  display: flex;
+  justify-content: flex-start; /*시작되는 지점부터 나란히 정렬*/
+  align-items: center;
+  padding: 0.3rem;
+  width: 100%;
+}
+.chatting-input {
+  font-size: 12px;
+  height: 100%;
+  flex: 8;
+  border: none;
+}
+.send-button {
+  flex: 1;
+  background: #ffeb33;
+  border: none;
+  border-radius: 3px;
+  height: 100%;
+}
+.chatting-list li {
+  width: 90%;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 0.5rem;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile .user {
+  font-size: 10px;
+  margin-bottom: 0.3rem;
+}
+.profile .image {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+}
+.message {
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 12px;
+  margin: 0 5px;
+  flex: 7;
+}
+.time {
+  font-size: 10px;
+  margin: 0 5px;
+}
+
+.sent {
+  flex-direction: row-reverse;
+  float: right;
+}
+
+.sent .message {
+  background: #ffeb33;
+}
+.received .message {
+  background: #fff;
+}
